@@ -1,0 +1,160 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+body {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container {
+	border: 2px solid #339af0;
+	width: 400px;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.container h1 {
+	color: #339af0;
+	text-align: center;
+	padding: 20px 0;
+	border-bottom: 1px solid #1c7ed6;
+}
+
+.container form {
+	padding: 20px 40px;
+}
+
+form .input-field {
+	position: relative;
+	margin: 30px 0;
+	border-bottom: 2px solid #9775fa;
+}
+
+.input-field input {
+	width: 100%;
+	height: 40px;
+	border: none;
+	outline: none;
+	background: none;
+	padding: 0 5px;
+	font-size: 16px;
+}
+
+.input-field label {
+	position: absolute;
+	top: 0;
+	left: 5px;
+	transform: translateY(-50%);
+	pointer-events: none;
+	font-size: 16px;
+	color: #9775fa;
+	transition: 0.2s ease-in-out;
+}
+
+.input-field .span-1::before {
+	content: "";
+	height: 2px;
+	width: 0;
+	background: #7048e8;
+	position: absolute;
+	top: 40px;
+	left: 0;
+	transition: 0.2s ease-in-out;
+}
+.input-field .span-2::before {
+	content: "";
+	height: 2px;
+	width: 0;
+	background: #7048e8;
+	position: absolute;
+	top: 40px;
+	left: 0;
+	transition: 0.2s ease-in-out;
+}
+
+.input-field input:focus ~ label {
+	top: -5px;
+	color: #7048e8;
+}
+
+.input-field input:focus ~ span::before {
+	width: 100%;
+}
+
+#registerError{
+	margin: -5px 0 20px 5px;
+	color: #9775fa;
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+}
+
+.pass a {
+	margin: -5px 0 20px 5px;
+	color: #9775fa;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.pass a:hover {
+	color: #7048e8;
+	text-decoration: underline;
+}
+
+.btn {
+	display: inline-block;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background: #339af0;
+	color: #fff;
+	border: 1px solid #339af0;
+	border-radius: 20px;
+	font-weight: 700;
+	margin-top: 30px;
+	transition: background 300ms ease-in-out;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background: #1c7ed6;
+}
+
+.sign-up {
+	text-align: center;
+	color: #9775fa;
+	margin: 30px 0;
+}
+
+.sign-up a {
+	text-decoration: none;
+	color: #9775fa;
+	transition: 0.3s ease-in-out;
+}
+
+.sign-up a:hover {
+	color: #7048e8;
+	text-decoration: underline;
+}
+
+
+.error {
+	color: #fff;
+	background-color: #e87878;;
+	text-align: center;
+	border: 1px solid #e84848;
+	padding: 8px 12px;
+	margin-top: 12px;
+	border-radius: 6px;
+	font-size: 0.9rem;
+	font-weight: 500;
+}

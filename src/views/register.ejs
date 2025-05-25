@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Quil Register</title>
+		<link rel="stylesheet" href="/styles/register.css" />
+	</head>
+	<body>
+		<div class="container">
+			<h1>Register</h1>
+			<form id="registerForm" method="POST" action="/user/register">
+				<div class="input-field">
+					<input id="name" name="username" type="text" required />
+					<span class="span-1"></span>
+					<label for="name">Username</label>
+				</div>
+
+				<div class="input-field">
+					<input
+						id="password"
+						name="password"
+						type="password"
+						required
+					/>
+					<span class="span-1"></span>
+					<label for="password">Password</label>
+				</div>
+
+				<!-- <div class="input-field">
+          <input
+            id="confirmPassword"
+            name="confirmPassword"
+            type="password"
+            required
+          />
+          <span class="span-2"></span>
+          <label for="confirmPassword">Confirm Password</label>
+        </div> -->
+
+				<div class="pass">
+					<p id="registerError"></p>
+					<a href="#">Forgot Password?</a>
+				</div>
+
+				<button type="submit" class="btn">Register</button>
+
+				<div class="sign-up">
+					Already have an account? <a href="/user/login">Login</a>
+				</div>
+			</form>
+			<% if (error && error.length > 0) { %>
+			<ul class="error-list">
+				<% error.forEach(err => { %>
+				<li class="error"><%= err.msg %></li>
+				<% }) %>
+			</ul>
+			<% } %>
+		</div>
+		<script>
+			window.onunload = function () {};
+		</script>
+		<!-- <script src="scripts/main.js"></script> -->
+	</body>
+</html>

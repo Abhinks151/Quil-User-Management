@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Admin Panel</title>
+		<link rel="stylesheet" href="/styles/admin.css" />
+
+	</head>
+	<body>
+		<div class="admin-container">
+			<div class="sidebar">
+				<h2>Admin</h2>
+				<ul>
+					<li><a href="/admin/dashboard">Dashboard</a></li>
+					<li><a href="/admin/users">Users</a></li>
+					<li><a href="#">Analytics</a></li>
+					<li><a href="#">Settings</a></li>
+				</ul>
+			</div>
+
+			<div class="main-content">
+				<div class="header-container">
+					<h1 class="header">Welcome, <%= adminName %></h1>
+					<form action="/admin/logout" method="POST">
+						<button type="submit" class="logout-button">
+							Logout
+						</button>
+					</form>
+				</div>
+				<div class="dashboard">
+					<div class="main-items">
+						<div class="box"></div>
+						<div class="box"></div>
+						<div class="box"></div>
+						<div class="box"></div>
+						<div class="box"></div>
+						<div class="box"></div>
+						<div class="box"></div>
+						<div class="box"></div>
+						<div class="box"></div>
+						<div class="box"></div>
+					</div>
+					<div class="graph"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

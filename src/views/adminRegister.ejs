@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Admin Register</title>
+		<link rel="stylesheet" href="/styles/register.css" />
+	</head>
+	<body>
+		<div class="container">
+			<h1>Admin Register</h1>
+			<form id="adminRegisterForm" method="POST" action="/admin/register">
+				<div class="input-field">
+					<input id="username" name="username" type="text" required />
+					<span class="span-1"></span>
+					<label for="username">Username</label>
+				</div>
+
+				<div class="input-field">
+					<input
+						id="password"
+						name="password"
+						type="password"
+						required
+					/>
+					<span class="span-1"></span>
+					<label for="password">Password</label>
+				</div>
+
+				<div class="pass">
+					<p id="registerError"></p>
+				</div>
+
+				<button type="submit" class="btn">Register</button>
+
+				<div class="sign-up">
+					Already have an account? <a href="/admin/login">Login</a>
+				</div>
+			</form>
+			<% if (error) { %>
+			<p class="error"><%= error %></p>
+			<% } %>
+		</div>
+	</body>
+</html>

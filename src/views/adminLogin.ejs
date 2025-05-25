@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="/styles/login.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Admin Login</h1>
+      <form id="adminLoginForm" method="POST" action="/admin/login">
+        <div class="input-field">
+          <input id="username" name="username" type="text" required />
+          <span class="span-1"></span>
+          <label for="username">Username</label>
+        </div>
+
+        <div class="input-field">
+          <input
+            id="password"
+            name="password"
+            type="password"
+            required
+          />
+          <span class="span-2"></span>
+          <label for="password">Password</label>
+        </div>
+
+        <div class="pass">
+          <p id="errorMessage"></p>
+          
+        </div>
+
+        <button type="submit" class="btn">Login</button>
+
+        <div class="sign-up">
+          Not an admin? <a href="/admin/register">Register</a>
+        </div>
+      </form>
+      <% if (error) { %>
+      <p class="error"><%= error %></p>
+      <% } %>
+    </div>
+  </body>
+</html>

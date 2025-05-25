@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Error <%= status %> - Something went wrong</title>
+  <style>
+    :root {
+      --primary-base: #008cff;
+      --primary-tint: #d0ebff;
+      --primary-shade: #1c7ed6;
+
+      --secondary-base: #7d53fd;
+      --secondary-tint: #e5dbff;
+      --secondary-shade: #7048e8;
+
+      --tertiary-base: #ff922b;
+      --tertiary-tint: #ffe8cc;
+      --tertiary-shade: #176707;
+
+      --grey-base: #495057;
+      --grey-tint: #f1f3f5;
+      --grey-shade: #212529;
+
+      --white: #ffffff;
+      --black: #000000;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--grey-tint);
+      color: var(--grey-shade);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding: 1rem;
+      animation: fadeIn 0.6s ease-in;
+    }
+
+    .error-box {
+      text-align: center;
+      background-color: var(--white);
+      border-left: 2px solid var(--tertiary-base);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      width: 100%;
+    }
+
+    .error-box img {
+      width: 120px;
+      margin-bottom: 1rem;
+    }
+
+    .error-box h1 {
+      font-size: 2.5rem;
+      color: var(--tertiary-base);
+      margin-bottom: 0.5rem;
+    }
+
+    .error-box p {
+      font-size: 1.1rem;
+      color: var(--grey-base);
+      margin-bottom: 1.5rem;
+    }
+
+    .error-box a {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      background-color: var(--primary-base);
+      color: var(--white);
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    .error-box a:hover {
+      background-color: var(--primary-shade);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="error-box" role="alert" aria-label="Error box">
+    <img src="https://cdn-icons-png.flaticon.com/512/564/564619.png" alt="Error Icon" />
+    <h1>Error <%= status %></h1>
+    <p><%= message %></p>
+    <a href="/">Go back to Home</a>
+  </div>
+</body>
+</html>

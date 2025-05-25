@@ -1,0 +1,273 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--primary-base: #008cff;
+	--primary-tint: #d0ebff;
+	--primary-shade: #1c7ed6;
+
+	--secondary-base: #7d53fd;
+	--secondary-tint: #e5dbff;
+	--secondary-shade: #7048e8;
+
+	--tertiary-base: #ff922b;
+	--tertiary-tint: #ffe8cc;
+	--tertiary-shade: #176707;
+
+	--grey-base: #495057;
+	--grey-tint: #f1f3f5;
+	--grey-shade: #212529;
+
+	--white: #ffffff;
+	--black: #000000;
+}
+
+/* Container for user management */
+.user-management {
+	width: 100%;
+	background-color: var(--white);
+	border-radius: 10px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+	font-size: 14px;
+	color: var(--grey-base);
+	overflow: hidden;
+}
+
+/* Header row */
+.grid-header {
+	display: flex;
+	background-color: var(--primary-base);
+	color: var(--white);
+	font-weight: 700;
+	border-radius: 10px 10px 0 0;
+}
+
+.grid-header > div {
+	padding: 14px 24px;
+	flex-shrink: 0;
+	text-align: left;
+	letter-spacing: 0.5px;
+}
+
+/* Define column widths */
+.grid-header > div:nth-child(1) {
+	width: 50px;
+}
+
+.grid-header > div:nth-child(2) {
+	flex-grow: 1; /* takes remaining space */
+}
+
+.grid-header > div:nth-child(3) {
+	width: 140px;
+}
+
+.grid-header > div:nth-child(4) {
+	width: 220px;
+}
+
+/* User row */
+.grid-row {
+	display: flex;
+	background-color: var(--grey-tint);
+	margin-bottom: 12px;
+	border-radius: 6px;
+	transition: background-color 0.25s ease, color 0.25s ease;
+	align-items: center;
+	color: var(--grey-base);
+	padding: 14px 24px;
+}
+
+.grid-row:nth-child(even) {
+	background-color: #f9faff;
+}
+
+.grid-row:hover {
+	background-color: var(--primary-tint);
+	color: var(--primary-shade);
+}
+
+.grid-row > div {
+	flex-shrink: 0;
+	text-align: left;
+}
+
+/* Same column widths for user rows */
+.grid-row > div:nth-child(1) {
+	width: 50px;
+}
+
+.grid-row > div:nth-child(2) {
+	flex-grow: 1;
+}
+
+.grid-row > div:nth-child(3) {
+	width: 140px;
+}
+
+.grid-row > div:nth-child(4) {
+	width: 220px;
+	display: flex;
+	gap: 12px;
+	align-items: center;
+}
+
+/* Role badges */
+.role-badge {
+	padding: 6px 14px;
+	border-radius: 50px;
+	font-size: 12px;
+	font-weight: 600;
+	color: var(--white);
+	text-transform: capitalize;
+	display: inline-block;
+	white-space: nowrap;
+}
+
+.admin-role {
+	background-color: var(--secondary-base);
+}
+
+.user-role {
+	background-color: var(--tertiary-base);
+}
+
+/* Buttons styling */
+.btn {
+	padding: 8px 16px;
+	border: none;
+	border-radius: 6px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background-color 0.25s ease;
+	font-size: 0.9rem;
+	user-select: none;
+}
+
+.btn-block {
+	background-color: #d9534f; /* bootstrap danger red */
+	color: var(--white);
+}
+
+.btn-block:disabled {
+	background-color: #ccc;
+	cursor: not-allowed;
+}
+
+.btn-block:hover:not(:disabled) {
+	background-color: #c9302c;
+}
+
+.btn-update {
+	background-color: var(--primary-base);
+	color: var(--white);
+}
+
+.btn-update:hover {
+	background-color: var(--primary-shade);
+}
+
+/* Main header and dashboard styling */
+.main-content h1 {
+	font-size: 24px;
+	color: var(--primary-shade);
+	margin-bottom: 20px;
+}
+
+.dashboard {
+	padding: 20px;
+	background: var(--white);
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+	margin-top: 20px;
+}
+
+.dashboard h2 {
+	margin-bottom: 20px;
+	font-weight: 700;
+	font-size: 1.8rem;
+	color: var(--primary-shade);
+}
+
+
+.btn-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+
+/* --- Search Form Container --- */
+.search-form {
+  display: flex;
+	/* flex-direction: ; */
+  flex-wrap: wrap;
+  align-items: center;
+	justify-content: center;
+  gap: 0.5rem;
+  /* margin-bottom: 1.5rem; */
+  padding: 0.5rem 0;
+}
+
+/* --- Search Input --- */
+.search-input {
+  flex: 1 1 250px;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.search-input:focus {
+  border-color: #007bff;
+}
+
+/* --- Search Button --- */
+.btn-search {
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-search:hover {
+  background-color: #0056b3;
+}
+
+/* --- Clear Button --- */
+.btn-clear {
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  background-color: #6c757d;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-clear:hover {
+  background-color: #5a6268;
+}
+
+
+.btn-delete {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  background-color: #c0392b;
+}

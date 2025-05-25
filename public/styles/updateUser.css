@@ -1,0 +1,156 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f2f5;
+  padding: 20px;
+}
+
+.container {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  width: 400px;
+  padding: 30px 40px;
+}
+
+.container h1 {
+  color: #3366ff;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 1.8rem;
+  user-select: none;
+}
+
+/* Form layout */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Shared styles for fields */
+.input-field,
+.role-field {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+/* Floating label base */
+input, select {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  background: #fafafa;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+input:focus,
+select:focus {
+  border-color: #3366ff;
+  background-color: #fff;
+  outline: none;
+}
+
+input::placeholder {
+  color: transparent; /* Hide placeholder */
+}
+
+/* Label styling */
+.input-field label,
+.role-field label {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 16px;
+  pointer-events: none;
+  transition: all 0.25s ease;
+  background: #fff;
+  padding: 0 6px;
+  user-select: none;
+}
+
+/* Float label when input has text or focus */
+.input-field input:focus + label,
+.input-field input:not(:placeholder-shown) + label,
+.role-field select:focus + label,
+.role-field select:not([value=""]) + label {
+  top: -10px;
+  font-size: 12px;
+  color: #3366ff;
+  font-weight: 600;
+}
+
+/* Custom arrow for select */
+.role-field {
+  position: relative;
+}
+
+.role-field::after {
+  content: "▼";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #999;
+  font-size: 14px;
+}
+
+/* Remove native select arrow */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Options styling */
+select option {
+  background: #fff;
+  color: #333;
+  font-size: 16px;
+}
+
+/* Buttons */
+.btn {
+  background-color: #3366ff;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-weight: 700;
+  padding: 14px 0;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  user-select: none;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background-color: #274bdb;
+}
+
+.btn.cancel {
+  background-color: #ccc;
+  color: #444;
+  margin-top: 15px;
+}
+
+.btn.cancel:hover {
+  background-color: #999;
+  color: #222;
+}

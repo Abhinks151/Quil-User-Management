@@ -1,0 +1,187 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--primary-base: #008cff;
+	--primary-tint: #d0ebff;
+	--primary-shade: #1c7ed6;
+
+	--secondary-base: #7d53fd;
+	--secondary-tint: #e5dbff;
+	--secondary-shade: #7048e8;
+
+	--tertiary-base: #ff922b;
+	--tertiary-tint: #ffe8cc;
+	--tertiary-shade: #176707;
+
+	--grey-base: #495057;
+	--grey-tint: #f1f3f5;
+	--grey-shade: #212529;
+
+	--white: #ffffff;
+	--black: #000000;
+}
+
+body {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	background: var(--grey-tint);
+}
+
+.admin-container {
+	display: flex;
+	width: 100%;
+	min-height: 100vh;
+}
+
+.sidebar {
+	width: 250px;
+	background: var(--secondary-shade); /* Rich purple */
+	color: var(--white);
+	padding: 20px;
+}
+
+.sidebar h2 {
+	margin-bottom: 30px;
+	font-size: 24px;
+	border-bottom: 2px solid var(--secondary-base);
+	padding-bottom: 10px;
+	color: var(--secondary-tint);
+}
+
+.sidebar ul {
+	list-style: none;
+	padding: 0;
+}
+
+.sidebar ul li {
+	margin: 20px 0;
+}
+
+.sidebar ul li a {
+	text-decoration: none;
+	color: var(--secondary-tint);
+	font-weight: 500;
+	transition: 0.2s ease;
+}
+
+.sidebar ul li a:hover {
+	color: var(--white);
+}
+
+.main-content {
+	flex-grow: 1;
+	padding: 30px;
+	background: var(--grey-tint);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.header-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 1080px;
+	background: var(--white);
+	border-radius: 10px;
+	border-bottom: 2px solid var(--primary-base);
+	padding: 20px;
+	margin-bottom: 30px;
+}
+
+.header {
+	font-size: 20px;
+	font-weight: 600;
+	color: var(--primary-shade);
+	margin: 0; /* Remove bottom margin to avoid spacing issue in flex */
+}
+
+.logout-button {
+	padding: 10px 20px;
+	background-color: violet;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	font-weight: bold;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	transition: background 0.3s ease;
+}
+
+.logout-button:hover {
+	background-color: darkviolet;
+}
+
+.create-button {
+	padding: 10px 20px;
+	background-color: rgb(3, 183, 54);
+	color: white;
+	border: none;
+	border-radius: 5px;
+	font-weight: bold;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	transition: background 0.3s ease;
+}
+
+.create-button:hover {
+	background-color: rgb(24, 138, 33);
+}
+
+.dashboard {
+	width: 1080px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.main-items {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 20px;
+}
+
+.box {
+	width: 200px;
+	height: 100px;
+	background-color: var(--primary-tint);
+	border-radius: 10px;
+}
+
+.graph {
+	width: 1080px;
+	height: 330px;
+	margin-top: 20px;
+	background-color: var(--primary-tint);
+	border-radius: 10px;
+}
+
+button {
+	background-color: var(--primary-base);
+	color: var(--white);
+	padding: 10px 20px;
+	border: none;
+	border-radius: 8px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: 0.2s ease;
+}
+
+button:hover {
+	background-color: var(--primary-shade);
+}
+
+.alert-box {
+	background-color: var(--tertiary-tint);
+	border-left: 5px solid var(--tertiary-base);
+	padding: 15px;
+	margin-bottom: 20px;
+	color: var(--tertiary-shade);
+	border-radius: 5px;
+}

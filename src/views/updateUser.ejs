@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Update User</title>
+  <!-- <link rel="stylesheet" href="/styles/login.css" /> -->
+  <link rel="stylesheet" href="/styles/updateUser.css" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+  <div class="container">
+    <h1>Update User: <%= user.username %></h1>
+    <p style="text-align:center; margin-bottom: 20px; color:#339af0;">
+      Logged in as <%= adminName %>
+    </p>
+
+    <form action="/admin/users/<%= user._id %>/update" method="POST">
+      <div class="input-field username-field">
+  <input
+    type="text"
+    id="username"
+    name="username"
+    value="<%= user.username %>"
+    required
+    placeholder=" "
+  />
+  <label for="username">Username</label>
+  <span class="underline"></span>
+</div>
+
+<div class="role-field">
+  <select id="role" name="role" required>
+    <option value="user" <%= user.role === 'user' ? 'selected' : '' %>>User</option>
+    <option value="admin" <%= user.role === 'admin' ? 'selected' : '' %>>Admin</option>
+  </select>
+  <label for="role">Role</label>
+  <span class="underline"></span>
+</div>
+
+
+
+      <button type="submit" class="btn">Save Changes</button>
+      <a href="/admin/users" class="btn" style="background:#9775fa; border-color:#9775fa; margin-top:10px; display:inline-block; text-align:center;">
+        Cancel
+      </a>
+    </form>
+  </div>
+</body>
+</html>

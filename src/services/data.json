@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1745859526201",
+    "name": "admin",
+    "password": "1",
+    "role": "user"
+  },
+  {
+    "id": "1745860095800",
+    "name": "Abhin",
+    "password": "1",
+    "role": "user"
+  },
+  {
+    "id": "1745900821670",
+    "name": "ABHIN KENY SURIJAKUMARI",
+    "password": "1",
+    "role": "user"
+  },
+  {
+    "id": "1746072220105",
+    "name": "Arsenic",
+    "password": "1",
+    "role": "user"
+  },
+  {
+    "id": "1746072956588",
+    "name": "Aswin",
+    "password": "1",
+    "role": "user"
+  }
+]

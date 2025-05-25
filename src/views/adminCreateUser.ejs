@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create New User</title>
+  <!-- <link rel="stylesheet" href="/styles/adminCreateUser.css" /> -->
+   <link rel="stylesheet" href="/styles/login.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Create New User</h1>
+
+    <form id="createUserForm" method="POST" action="/admin/users/create">
+      
+      <div class="input-field">
+        <input 
+          id="username" 
+          name="username" 
+          type="text" 
+          placeholder=" " 
+          required 
+          value="<%= typeof formData !== 'undefined' ? formData.username : '' %>"
+        />
+        <span class="span-1"></span>
+        <label for="username">Username</label>
+      </div>
+
+      <div class="input-field">
+        <input 
+          id="password" 
+          name="password" 
+          type="password" 
+          placeholder=" " 
+          required 
+        />
+        <span class="span-2"></span>
+        <label for="password">Password</label>
+      </div>
+
+      <% if (error && error.length > 0) { %>
+        <div class="error">
+          <ul>
+            <% error.forEach(err => { %>
+              <li><%= err.msg %></li>
+            <% }) %>
+          </ul>
+        </div>
+      <% } %>
+
+      <button type="submit" class="btn">Create User</button>
+    </form>
+
+    <div class="sign-up" style="text-align:center; margin-top: 20px;">
+      <a href="/admin/dashboard">← Back to Dashboard</a>
+    </div>
+  </div>
+</body>
+</html>
