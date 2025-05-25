@@ -62,6 +62,7 @@ Packages Used:express, mongoose, dotenv, bcrypt, express-session, connect-mongo,
 
 📁 Folder Structure
 
+<pre>
 Quil/
 ├── public/
 ├── src/
@@ -77,6 +78,8 @@ Quil/
 ├── server.js
 ├── package.json
 └── README.md
+</pre>
+
 
 ⚙️ Installation & Setup
 
